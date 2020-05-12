@@ -1,0 +1,239 @@
+    1  sudo apt update
+    2  sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    3  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    4  sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    5  sudo apt update
+    6  apt-cache policy docker-ce
+    7  sudo apt install docker-ce
+    8  sudo systemctl status docker
+    9  sudo usermod -aG docker ${USER}
+   10  sudo passwd
+   11  su - ${USER}
+   12  ls
+   13  mkdir hello
+   14  sudo curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+   15  sudo chmod +x /usr/local/bin/docker-compose
+   16  docker-compose --version
+   17  rm Dockerfile 
+   18  rm client server
+   19  rm -rf client server
+   20  curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+   21  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+   22  nvm --version
+   23  nvm install node
+   24  nvm ls
+   25  node
+   26  npm
+   27  l
+   28  npx create-react-app client
+   29  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+   30  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+   31  sudo apt update
+   32  sudo apt install yarn
+   33  nvm list
+   34  sudo apt remove node
+   35  sudo apt remove nodejs
+   36  node
+   37  nvm list
+   38  node
+   39  cd client/
+   40  ls
+   41  yarn
+   42  yarn upgrade-interactive --latest
+   43  yarn
+   44  yarn start
+   45  npm start
+   46  cd ..
+   47  l
+   48  ls
+   49  cd ,,
+   50  cd ..
+   51  ls
+   52  cd
+   53  ls
+   54  cd hello/
+   55  ls
+   56  npx create-react-app client
+   57  cd client/
+   58  yarn start
+   59  sudo apt remove yarn
+   60  sudo apt autoremove 
+   61  cd ..
+   62  ls
+   63  rm -rf client/
+   64  ls
+   65  npx create-react-app client
+   66  cd client/
+   67  npm start
+   68  ls
+   69  docker build -t react-client:dev .
+   70  docker run -d --name react-client -p 3000:3000 react-client:dev
+   71  docker ps -a
+   72  docker rm 6
+   73  docker ps -a
+   74  docker run --name react-client -p 3000:3000 react-client:dev
+   75  docker ps -a
+   76  docker rm 0
+   77  docker ps -a
+   78  npm start 
+   79  docker build -t react-client:dev .
+   80  docker run --name react-client -p 3000:3000 react-client:dev
+   81  cd ..
+   82  cd 
+   83  ls
+   84  cd hello/
+   85  ls
+   86  ls -al
+   87  npx @angular/cli new angular-client
+   88  cd angular-client/
+   89  rm -rf .git
+   90  docker images ls
+   91  docker build -t angular-client:dev .
+   92  ls
+   93  npm start
+   94  docker run -d --name angular-client -p 4200:4200 angular-client:dev
+   95  cd ..
+   96  docker run --name react-client -p 3000:3000 react-client:dev
+   97  docker ps -a
+   98  docker rm 2
+   99  docker ps -a
+  100  docker stop b
+  101  docker ps -a
+  102  docker rm b
+  103  docker image -a
+  104  docker images -a
+  105  docker rmi $(docker images -q)
+  106  docker images -a
+  107  ls
+  108  l
+  109  git clone https://github.com/yesaswi/GraphQL-JWT.git
+  110  cd graphql-server/
+  111  ls
+  112  sudo apt update && sudo apt install --no-install-recommends yarn
+  113  ls
+  114  yarn
+  115  yarn start
+  116  ls
+  117  #docker run --name my_postgres -d --rm -e POSTGRES_PASSWORD=postgres -v jwt_graphql:/var/lib/postgresql/data -p 5432:5432 postgres
+  118  docker volume create hello
+  119  docker run --name postgres-dev -d --rm -e POSTGRES_PASSWORD=postgres -v hello:/var/lib/postgresql/data -p 5432:5432 postgres
+  120  docker ps -a
+  121  history 
+  122  ls
+  123  yarn start
+  124  docker exec -it postgres-dev bash
+  125  yarn start
+  126  rm -rf .git
+  127  docker build -t graphql-server:dev .
+  128  docker run -d --rm --name graphql-server -p 4000:4000 graphql-server:dev
+  129  docker ps -a
+  130  docker logs c
+  131  docker rm c
+  132  docker stop c
+  133  docker rm c
+  134  docker build -t graphql-server:dev .
+  135  docker run -d --rm --name graphql-server -p 4000:4000 graphql-server:dev
+  136  docker logs 8
+  137  docker rm c
+  138  docker rm 8
+  139  docker stop 8
+  140  docker ps -a
+  141  docker build -t graphql-server:dev .
+  142  docker run -d --rm --name graphql-server -p 4000:4000 graphql-server:dev
+  143  docker logs 8
+  144  docker ps -a
+  145  docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id
+  146  docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' e
+  147  docker stop 8
+  148  docker build -t graphql-server:dev .
+  149  docker run -d --rm --name graphql-server -p 4000:4000 graphql-server:dev
+  150  docker logs 0
+  151  docker-compose --version
+  152  docker volumes
+  153  docker volume ls
+  154  history 
+  155  docker images -a
+  156  cd ..
+  157  l
+  158  cd angular-client/
+  159  docker build -t angular-client:dev .
+  160  docker ps -a
+  161  docker stop 0 e
+  162  docker ps -a
+  163  cd ..
+  164  cd graphql-server/
+  165  ls
+  166  docker build -t graphql-server:dev .
+  167  cd ..
+  168  l
+  169  docker-compose up
+  170  docker volume ls
+  171  docker volume rm hello
+  172  docker-compose up
+  173  docker system prune -a
+  174  docker ps -a
+  175  docker image
+  176  docker image -a
+  177  docker images -a
+  178  docker volume ls
+  179  docker system prune 
+  180  docker system prune --volumes
+  181  docker system prune --all
+  182  docker-compose up
+  183  docker-compose build
+  184  docker-compose up
+  185  docker system prune --all
+  186  docker system prune --volumes
+  187  ng add apollo-angular
+  188  npm lisy
+  189  npm list
+  190  cd angular-client/
+  191  ng add apollo-angular
+  192  ls
+  193  ng serve
+  194  source node_modules/.bin/ng add apollo-angular
+  195  sudo npm install -g typescript
+  196  npm install -g typescript
+  197  npm install -g @angular/cli
+  198  npm list
+  199  npm list --depth=0
+  200  cd ..
+  201  ls
+  202  ng add apollo-angular
+  203  cd angular-client/
+  204  ng add apollo-angular
+  205  npm start
+  206  ng generate component exchange-rates
+  207  ng g exchange-rates
+  208  ls
+  209  ng g c e
+  210  ng generate component componentname
+  211  ng generate component hero-detail
+  212  cd ..
+  213  ls
+  214  rm -rf angular-client/
+  215  history | grep npx
+  216  ng new my-app
+  217  cd my-app/
+  218  ls
+  219  rm -rf .git
+  220  ng serve
+  221  ng serve --open
+  222  npm start
+  223  ng generate component xyz
+  224  ng generate component exchange-rates
+  225  npm start
+  226  ng add apollo-angular
+  227  npm start
+  228  cd ..
+  229  ls
+  230  git init
+  231  git add .
+  232  git commit -m "Initial Commit"
+  233  git remote add origin https://github.com/yesaswi/Docker-Graphql-Angular.git
+  234  git push -u origin master
+  235  git config --global user.email "yesaswi.vadapalli@gmail.com"
+  236  git commit -m "Initial Commit"
+  237  git push -u origin master
+  238  ls
+  239  history > history
