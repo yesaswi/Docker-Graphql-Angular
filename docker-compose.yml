@@ -1,0 +1,30 @@
+version: '2' # specify docker-compose version
+https://scotch.io/tutorials/create-a-mean-app-with-angular-2-and-docker-compose#toc-angular-client-app
+# Define the services/containers to be run
+services:
+  angular: # name of the first service
+    build: angular-client # specify the directory of the Dockerfile
+    ports:
+      - "4200:4200" # specify port forewarding
+    volumes:
+      - ./angular-client:/app # this will enable changes made to the angular app reflect in the container
+
+  express: #name of the second service
+    build: graphql-server # specify the directory of the Dockerfile
+    ports:
+      - "4000:4000" #specify ports forewarding
+    links:
+      - database
+
+  database:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - hello:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432" # specify port forewarding
+  
+volumes:
+  hello:
